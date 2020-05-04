@@ -54,36 +54,36 @@ if (! empty($_POST["signup-btn"])) {
 					<div class="row">
 						<div class="inline-block">
 							<div class="form-label">
-								Username<span class="required error" id="username-info"></span>
+								<span class="required error" id="username-info"></span>
 							</div>
-							<input class="form-control" type="text" name="username"
+							<input class="form-control" placeholder="Username" type="text" name="username"
 								id="username">
 						</div>
 					</div>
 					<div class="row">
 						<div class="inline-block">
 							<div class="form-label">
-								Email<span class="required error" id="email-info"></span>
+								<span class="required error" id="email-info"></span>
 							</div>
-							<input class="form-control" type="email" name="email" id="email">
+							<input class="form-control" placeholder="Email" type="email" name="email" id="email">
 						</div>
 					</div>
 					<div class="row">
 						<div class="inline-block">
 							<div class="form-label">
-								Password<span class="required error" id="signup-password-info"></span>
+								<span  class="required error" id="signup-password-info"></span>
 							</div>
-							<input class="form-control" type="password"
+							<input class="form-control" placeholder="Password" type="password"
 								name="signup-password" id="signup-password">
 						</div>
 					</div>
 					<div class="row">
 						<div class="inline-block">
 							<div class="form-label">
-								Confirm Password<span class="required error"
+								<span class="required error"
 									id="confirm-password-info"></span>
 							</div>
-							<input class="form-control" type="password"
+							<input class="form-control" placeholder="Confirm Password" type="password"
 								name="confirm-password" id="confirm-password">
 						</div>
 					</div>
