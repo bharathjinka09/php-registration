@@ -8,23 +8,27 @@ if (! empty($_POST["signup-btn"])) {
 ?>
 <HTML>
 <HEAD>
-<TITLE>Registration</TITLE>
+<TITLE>Vendor Registration</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- 
 <link href="./assets/css/phppot-style.css" type="text/css"
-	rel="stylesheet" />
+	rel="stylesheet" /> -->
 <link href="./assets/css/user-registration.css" type="text/css"
 	rel="stylesheet" />
 <script src="./vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
 <BODY>
-	<div class="phppot-container">
-		<div class="sign-up-container">
-			<div class="login-signup">
+	<div class="container">
+		<div>
+			<!-- <div class="login-signup">
 				<a href="index.php">Login</a>
-			</div>
-			<div class="">
+			</div> -->
+					<div class="text-center"><h1>Vendor Registration</h1></div>
+
+			<div class="col-md-4 offset-md-4"> 
 				<form name="sign-up" action="" method="post"
 					onsubmit="return signupValidation()">
-					<div class="signup-heading">Registration</div>
 				<?php 
 				if(!empty($registrationResponse["status"]))
 				{
@@ -52,7 +56,7 @@ if (! empty($_POST["signup-btn"])) {
 							<div class="form-label">
 								Username<span class="required error" id="username-info"></span>
 							</div>
-							<input class="input-box-330" type="text" name="username"
+							<input class="form-control" type="text" name="username"
 								id="username">
 						</div>
 					</div>
@@ -61,7 +65,7 @@ if (! empty($_POST["signup-btn"])) {
 							<div class="form-label">
 								Email<span class="required error" id="email-info"></span>
 							</div>
-							<input class="input-box-330" type="email" name="email" id="email">
+							<input class="form-control" type="email" name="email" id="email">
 						</div>
 					</div>
 					<div class="row">
@@ -69,7 +73,7 @@ if (! empty($_POST["signup-btn"])) {
 							<div class="form-label">
 								Password<span class="required error" id="signup-password-info"></span>
 							</div>
-							<input class="input-box-330" type="password"
+							<input class="form-control" type="password"
 								name="signup-password" id="signup-password">
 						</div>
 					</div>
@@ -79,17 +83,19 @@ if (! empty($_POST["signup-btn"])) {
 								Confirm Password<span class="required error"
 									id="confirm-password-info"></span>
 							</div>
-							<input class="input-box-330" type="password"
+							<input class="form-control" type="password"
 								name="confirm-password" id="confirm-password">
 						</div>
 					</div>
 					<div class="row">
-						<input class="sign-up-btn" type="submit" name="signup-btn"
-							id="signup-btn" value="Sign up">
+						<input class="btn btn-info" type="submit" name="signup-btn"
+							id="signup-btn" value="Register">
 					</div>
 				</form>
 			</div>
+
 		</div>
+
 	</div>
 
 	<script>

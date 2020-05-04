@@ -5,7 +5,7 @@ session_start();
 ?>
 <HTML>
 <HEAD>
-<TITLE>user-registration</TITLE>
+<TITLE>Vendor Registration</TITLE>
 <link href="./assets/css/phppot-style.css" type="text/css"
 	rel="stylesheet" />
 <link href="./assets/css/user-registration.css" type="text/css"

@@ -12,7 +12,7 @@ if (! empty($_POST["login-btn"])) {
 			<div class="signup-align">
 				<form name="login" action="" method="post"
 					onsubmit="return loginValidation()">
-					<div class="signup-heading">Login</div>
+					<data></data>iv class="signup-heading">Login</div>
 				<?php if(!empty($loginResult)){?>
 				<div class="error-msg"><?php echo $loginResult;?></div>
 				<?php }?>
