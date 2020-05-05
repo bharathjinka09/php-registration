@@ -46,40 +46,40 @@ class Member
                 $response = array("status" => "success", "message" => "You have registered successfully.");
             }
         } else if ($result == 1) {
-            $response = array("status" => "error", "message" => "Email already exists.");
+            $response = array("status" => "error", "message" => "Email already exists. Please try again with a new email.");
         }
         return $response;
     }
 
-    public function getMember($username)
-    {
-        $query = 'SELECT * FROM tbl_member where username = ?';
-        $paramType = 's';
-        $paramValue = array(
-            $username
-        );
-        $loginUser = $this->ds->select($query, $paramType, $paramValue);
-        return $loginUser;
-    }
+    // public function getMember($username)
+    // {
+    //     $query = 'SELECT * FROM tbl_member where username = ?';
+    //     $paramType = 's';
+    //     $paramValue = array(
+    //         $username
+    //     );
+    //     $loginUser = $this->ds->select($query, $paramType, $paramValue);
+    //     return $loginUser;
+    // }
 
-    public function loginMember()
-    {
-        $loginUserResult = $this->getMember($_POST["username"]);
-        if (! empty($_POST["signup-password"])) {
-            $password = $_POST["signup-password"];
-        }
-        $hashedPassword = $loginUserResult[0]["password"];
-        $loginPassword = 0;
-        if (password_verify($password, $hashedPassword)) {
-            $loginPassword = 1;
-        }
-        if ($loginPassword == 1) {
-            $_SESSION["username"] = $loginUserResult[0]["username"];
-            $url = "./home.php";
-            header("Location: $url");
-        } else if ($loginPassword == 0) {
-            $loginStatus = "Invalid username or password.";
-            return $loginStatus;
-        }
-    }
+    // public function loginMember()
+    // {
+    //     $loginUserResult = $this->getMember($_POST["username"]);
+    //     if (! empty($_POST["signup-password"])) {
+    //         $password = $_POST["signup-password"];
+    //     }
+    //     $hashedPassword = $loginUserResult[0]["password"];
+    //     $loginPassword = 0;
+    //     if (password_verify($password, $hashedPassword)) {
+    //         $loginPassword = 1;
+    //     }
+    //     if ($loginPassword == 1) {
+    //         $_SESSION["username"] = $loginUserResult[0]["username"];
+    //         $url = "./home.php";
+    //         header("Location: $url");
+    //     } else if ($loginPassword == 0) {
+    //         $loginStatus = "Invalid username or password.";
+    //         return $loginStatus;
+    //     }
+    // }
 }
